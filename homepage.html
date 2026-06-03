@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursing Notes | Student Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main"> 
+        <header class="navbar">
+            <div class="logo">
+                <h2>Nursing<span>Notes</span></h2>
+            </div>    
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" id="home-link" class="active">HOME</a></li>
+                    <li><a href="#" id="notes-link">NOTES</a></li>
+                    <li><a href="#" id="about-link">ABOUT</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" id="dashboard-search-input" class="search-input" placeholder="Search study notes...">
+                <button id="dashboard-search-btn" class="search-btn">Search</button>
+            </div>
+        </header>
+
+        <main id="home-view" class="hero-container">
+            <div class="hero-content">
+                <h1>Your Ultimate <br><span>Nursing Study</span> <br>Companion</h1>
+                <p class="hero-description">
+                    Nursing school shouldn't feel like learning a foreign language in the dark. 
+                    We bridge the massive gap between heavy theory and real-world clinical practice. 
+                    Our clear, reliable, and actionable notes are meticulously organized to help you 
+                    survive rigorous exams, excel in clinical rotations, and transition seamlessly from 
+                    student to confident healthcare professional.
+                </p>
+                <div class="cta-wrapper">
+                    <a href="#" class="join-btn" onclick="showView('notes')">JOIN US</a>
+                </div>
+            </div>
+        </main>
+
+        <main id="notes-view" class="dashboard-container hidden">
+            
+            <aside class="sidebar">
+                <div class="sidebar-menu">
+                    <button class="year-btn active" id="btn-year1" onclick="switchYear('year1')">1ST YEAR</button>
+                    <button class="year-btn" id="btn-year2" onclick="switchYear('year2')">2ND YEAR</button>
+                    <button class="year-btn" id="btn-year3" onclick="switchYear('year3')">3RD YEAR</button>
+                    <button class="year-btn" id="btn-year4" onclick="switchYear('year4')">4TH YEAR</button>
+                    <button class="year-btn special-btn" id="btn-others" onclick="switchYear('others')">OTHERS</button>
+                </div>
+                <p class="sidebar-desc" id="year-description">
+                    Your first year is all about building a foundation. Before you can learn how to treat an illness, you have to master how a healthy body functions.
+                </p>
+            </aside>
+
+            <section class="notes-grid">
+                
+                <div id="year1-content" class="year-content-block">
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Anatomy & Physiology (A&P)</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">The structural map of the human body and how its organ systems interact.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Homeostasis & Cellular Transport</h5>
+                                <ul>
+                                    <li><strong>Homeostasis:</strong> Maintenance of a stable internal environment via negative feedback loops (e.g., body temperature, blood glucose regulation).</li>
+                                    <li><strong>Cell Membrane:</strong> Semi-permeable lipid bilayer. Passive transport (diffusion, osmosis) moves down gradient; active transport (Sodium-Potassium pump) requires ATP energy.</li>
+                                </ul>
+                            </div>
+                            <div class="lecture-topic">
+                                <h5>Lecture 2: Major Organ Systems Overview</h5>
+                                <ul>
+                                    <li><strong>Cardiovascular & Respiratory:</strong> Combined gas exchange and transport mechanism distributing oxygenated blood and removing metabolic waste products.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Biochemistry</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Essential chemical principles behind human metabolism, genetics, and cellular processes.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Macromolecules & Cellular Energy Mechanics</h5>
+                                <ul>
+                                    <li><strong>Carbohydrate Pathways:</strong> Glycolysis (cytosol, anaerobic, net 2 ATP output) vs. Krebs Cycle & Electron Transport Chain (mitochondria, aerobic, generates 32-36 ATP).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Theoretical Foundations of Nursing</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Introducing the history, nursing pioneers, and frameworks that define patient care.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Core Metaparadigm & Pioneer Models</h5>
+                                <ul>
+                                    <li><strong>Nursing Metaparadigm:</strong> Consists of 4 pillars: Person, Environment, Health, and Nursing.</li>
+                                    <li><strong>Florence Nightingale:</strong> Environmental Theory emphasizes optimizing clean air, pure water, ventilation, light, and hygiene.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Health Assessment</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Learning to interview patients and physically examine them.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: The IPPA Framework & Vitals</h5>
+                                <ul>
+                                    <li><strong>Standard Physical Exam Order:</strong> Inspection, Palpation, Percussion, Auscultation.</li>
+                                    <li><strong>Abdominal Exception:</strong> Inspection, Auscultation, Percussion, Palpation to prevent altering natural bowel frequencies.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Fundamentals of Nursing Practice</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Infection control, vital signs, bed-making, and basic patient safety guidelines.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Infection Control & The Nursing Process</h5>
+                                <ul>
+                                    <li><strong>ADPIE Framework:</strong> Assessment, Diagnosis, Planning, Implementation, Evaluation.</li>
+                                    <li><strong>Isolation Precautions:</strong> Airborne (N95), Droplet (Surgical mask), Contact (Gowns and gloves).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <div id="year2-content" class="year-content-block hidden">
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Microbiology & Parasitology</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">The study of bacteria, viruses, and parasites, and how they cause infectious diseases.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Bacterial Taxonomy & Gram Staining</h5>
+                                <ul>
+                                    <li><strong>Gram-Positive:</strong> Stains purple (thick peptidoglycan layer).</li>
+                                    <li><strong>Gram-Negative:</strong> Stains pink/red (thin peptidoglycan with lipopolysaccharide outer wall containing endotoxins).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Pharmacology</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">How drugs work in the body, calculating safe medication dosages, and monitoring side effects.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Mechanism of Actions & Safe Administration</h5>
+                                <ul>
+                                    <li><strong>Pharmacokinetics vs. Dynamics:</strong> Kinetics involves body actions on a drug (ADME); Dynamics tracks drug actions on the biological system.</li>
+                                    <li><strong>The Rights of Medication Administration:</strong> Checking Right Patient, Right Drug, Right Dose, Right Route, Right Time, and proper documentation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Nutrition & Diet Therapy</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Dietary planning for both health maintenance and specific disease management.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Therapeutic Modification Strategies</h5>
+                                <ul>
+                                    <li><strong>Renal Restrictions:</strong> Restricting Potassium, Sodium, Phosphorus, and fluid loading to reduce pressure on the kidneys.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Community Health Nursing 1</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Transitioning focus from individual patients to treating families and understanding local public health.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Levels of Public Health Prevention</h5>
+                                <ul>
+                                    <li><strong>Primary:</strong> Disease avoidance (Vaccines). <strong>Secondary:</strong> Early detection (Screenings). <strong>Tertiary:</strong> Rehabilitation (Physical Therapy).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Care of Mother, Child, and Adolescent</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Pregnancy, labor, delivery, postpartum care, newborn assessment, and pediatric milestone metrics.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Obstetric Milestones & APGAR Scoring</h5>
+                                <ul>
+                                    <li><strong>APGAR Matrix:</strong> Evaluates Appearance, Pulse, Grimace, Activity, and Respiration at 1 and 5 minutes post-delivery.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <div id="year3-content" class="year-content-block hidden">
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Medical-Surgical Nursing (Care of Clients)</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">A massive core topic mapping out complex adult illnesses—cellular, fluid, or metabolic alterations.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Fluid, Electrolyte & Metabolic Disturbances</h5>
+                                <ul>
+                                    <li><strong>Potassium Safety:</strong> Normal values range from 3.5 to 5.0 mEq/L. <em>Never give Potassium via IV push.</em></li>
+                                    <li><strong>DKA vs. HHS:</strong> DKA happens primarily in Type 1 DM (ketones present, acidosis); HHS happens in Type 2 DM (extreme hyperglycemia, no ketones).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Mental Health / Psychiatric Nursing</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Assessing and caring for patients facing maladaptive behaviors, acute psychiatric issues, depression, and anxiety.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Communication Boundaries & Dynamics</h5>
+                                <ul>
+                                    <li><strong>Transference vs. Countertransference:</strong> Transference is patient projecting onto the nurse; countertransference is nurse projecting onto the patient.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Care of the Older Person (Geriatrics)</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Managing the multi-layered healthcare needs, cognitive changes, and chronic illnesses of elderly populations.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Differentiating Delirium vs. Dementia</h5>
+                                <ul>
+                                    <li><strong>Delirium:</strong> Acute, abrupt, temporary confusion window caused by secondary vectors (UTI, dehydration). <strong>Dementia:</strong> Progressive, slow, and irreversible cognitive decline.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Nursing Research (1 and 2)</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Learning how to critique medical literature, design a study, use biostatistics, and draft a thesis statement.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Methodologies & Ethical Compliance</h5>
+                                <ul>
+                                    <li><strong>Quantitative vs. Qualitative:</strong> Quantitative uses data values and numbers; qualitative gathers live, narrative patient perspectives and experiences.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <div id="year4-content" class="year-content-block hidden">
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Critical Care & Disaster Nursing</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Managing life-threatening conditions inside ICU environments and handling public health triage chains.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Mass Casualty START Triage Protocol</h5>
+                                <ul>
+                                    <li><strong>Color Coding:</strong> <strong>RED:</strong> Immediate life threat. <strong>YELLOW:</strong> Delayed, stable trauma. <strong>GREEN:</strong> Walking wounded. <strong>BLACK:</strong> Deceased/Pulseless.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Nursing Leadership and Management</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Learning hospital organizational structures, legal responsibilities, scheduling, and ethics.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Delegation Mechanics & Legal Boundaries</h5>
+                                <ul>
+                                    <li><strong>The EAT Delegation Principle:</strong> RNs cannot delegate items requiring Evaluation, Assessment, or Teaching to assistive personnel.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Intensive Nursing Practicum</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Transitioning to full clinical shifts under a preceptor, handling a multi-patient load to build autonomy.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: Professional Transitions & SBAR Communication</h5>
+                                <ul>
+                                    <li><strong>SBAR Standardization:</strong> Efficient clinical updates structure using Situation, Background, Assessment, Recommendation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">Competency Appraisal</span>
+                            <span class="toggle-icon">+</span>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Structured review classes designed to synthesize all four years of study for board exams.</p>
+                            <div class="lecture-topic">
+                                <h5>Lecture 1: High-Yield Test Strategies</h5>
+                                <ul>
+                                    <li><strong>Priority Principle:</strong> Always choose acute/sudden physiological dynamic threats over chronic, expected symptomatic presentations.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <div id="others-content" class="year-content-block hidden">
+                    <div class="others-placeholder" id="no-notes-msg">
+                        <p>No personal notes recorded yet. Click the <strong>+</strong> button in the bottom right corner to log your own custom notes with labels!</p>
+                    </div>
+                    <div id="student-dynamic-cards-container" style="display: flex; flex-direction: column; gap: 20px;"></div>
+                </div>
+
+                <div id="search-empty-fallback" class="others-placeholder hidden" style="border-color: rgba(255, 77, 77, 0.2);">
+                    <p style="color: #ff4d4d; font-weight: 600;">No matching nursing subjects or records discovered.</p>
+                    <p style="font-size: 13px; margin-top: 5px;">Double-check your spelling or clear the search query to see all classes.</p>
+                </div>
+
+            </section>
+        </main>
+
+        <main id="about-view" class="about-container hidden">
+            <div class="about-grid">
+                
+                <div class="about-card">
+                    <div class="about-icon">🎯</div>
+                    <h3>Our Purpose</h3>
+                    <p>
+                        Nursing school presents an incredibly dense volume of medical literature and practical frameworks. 
+                        <strong>NursingNotes</strong> was engineered to bridge the massive gap between complex textbook theory and fast-paced clinical environments. 
+                        By distilling extensive lectures into clean, structural insights, this hub functions as an efficient cognitive support space for future medical professionals.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">🎓</div>
+                    <h3>Target Audience</h3>
+                    <p>
+                        This system is tailored specifically for **Nursing Students** traversing everything from foundational anatomy to intense board competency appraisals. 
+                        Whether you are an associate adjusting to clinical rotations or a senior organizing high-yield review sheets, these workspaces adapt gracefully to your academic timeline.
+                    </p>
+                </div>
+
+                <div class="about-card profile-card">
+                    <div class="about-icon">💻</div>
+                    <h3>About the Developer</h3>
+                    <p>
+                        Designed and developed by <strong>Lance Peralta</strong>. <br><br>
+                        An undergraduate <strong>BSIT student</strong> studying at <strong>Jose Rizal University</strong>. 
+                        Driven by a dedication to building clean, interactive web applications, this workspace stands as a custom implementation demonstrating efficient frontend mechanics, interface organization, and secure client-side storage management.
+                    </p>
+                </div>
+
+            </div>
+        </main>
+        
+        <button class="student-notes-toggle" id="open-modal-fab" title="Add New Personal Note">+</button>
+        
+        <div class="custom-modal-overlay hidden" id="note-modal">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <h3>Create Personal Study Outline</h3>
+                    <button id="close-modal-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="note-title-input">Subject Label / Topic Title</label>
+                        <input type="text" id="note-title-input" placeholder="e.g., Pathophysiology Reminders, RLE Log, My Flashcards...">
+                    </div>
+                    <div class="form-group">
+                        <label for="note-body-input">Your Study Material / Notes</label>
+                        <textarea id="note-body-input" placeholder="Type clinical insights, acronym keys, or specific formulas here..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-btn cancel" id="cancel-modal-btn">Discard</button>
+                    <button class="modal-btn save" id="save-note-btn">Save to 'Others'</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const homeLink = document.getElementById('home-link');
+        const notesLink = document.getElementById('notes-link');
+        const aboutLink = document.getElementById('about-link');
+        
+        const homeView = document.getElementById('home-view');
+        const notesView = document.getElementById('notes-view');
+        const aboutView = document.getElementById('about-view');
+        
+        // Modal DOM Elements
+        const openModalFab = document.getElementById('open-modal-fab');
+        const noteModal = document.getElementById('note-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const cancelModalBtn = document.getElementById('cancel-modal-btn');
+        const saveNoteBtn = document.getElementById('save-note-btn');
+        const noteTitleInput = document.getElementById('note-title-input');
+        const noteBodyInput = document.getElementById('note-body-input');
+        const dynamicCardsContainer = document.getElementById('student-dynamic-cards-container');
+        const noNotesMsg = document.getElementById('no-notes-msg');
+
+        // Search DOM Accessors
+        const searchInput = document.getElementById('dashboard-search-input');
+        const searchBtn = document.getElementById('dashboard-search-btn');
+        const searchEmptyFallback = document.getElementById('search-empty-fallback');
+
+        const descriptions = {
+            year1: "Your first year is all about building a foundation. Before you can learn how to treat an illness, you have to master how a healthy body functions.",
+            year2: "Year two introduces the clinical environment. This is usually when you start your Related Learning Experiences (RLE)—your rotations inside actual hospital wards and community clinics.",
+            year3: "Third year is famously the most demanding period of nursing school. The focus shifts entirely toward complex physiological and psychological conditions.",
+            year4: "The final year aims to polish your critical-thinking skills, prepare you for the realities of medical staff dynamics, and complete your required clinical hours.",
+            others: "Welcome to your personal repository workspace. Custom note outlines logged using the floating action controller will file directly inside this specialized sector."
+        };
+
+        function showView(viewName) {
+            homeView.classList.add('hidden');
+            notesView.classList.add('hidden');
+            aboutView.classList.add('hidden');
+            
+            homeLink.classList.remove('active');
+            notesLink.classList.remove('active');
+            aboutLink.classList.remove('active');
+            
+            if (viewName === 'home') {
+                homeView.classList.remove('hidden');
+                homeLink.classList.add('active');
+            } else if (viewName === 'notes') {
+                notesView.classList.remove('hidden');
+                notesLink.classList.add('active');
+            } else if (viewName === 'about') {
+                aboutView.classList.remove('hidden');
+                aboutLink.classList.add('active');
+            }
+        }
+
+        function switchYear(yearId) {
+            document.querySelectorAll('.year-content-block').forEach(block => {
+                block.classList.add('hidden');
+            });
+            document.getElementById(`${yearId}-content`).classList.remove('hidden');
+
+            document.querySelectorAll('.year-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            const targetedBtn = document.getElementById(`btn-${yearId}`);
+            if (targetedBtn) targetedBtn.classList.add('active');
+
+            document.getElementById('year-description').innerText = descriptions[yearId];
+        }
+
+        // --- DATA PERSISTENCE ENGINE ---
+        let collectionOfNotes = JSON.parse(localStorage.getItem('nursing_dashboard_custom_notes')) || [];
+
+        function renderStudentNotes() {
+            dynamicCardsContainer.innerHTML = '';
+            if (collectionOfNotes.length === 0) {
+                noNotesMsg.style.display = 'block';
+                return;
+            }
+            
+            noNotesMsg.style.display = 'none';
+            
+            collectionOfNotes.forEach((noteItem, index) => {
+                const cardMarkup = `
+                    <details class="note-card">
+                        <summary class="card-header">
+                            <span class="card-title">${escapeHTML(noteItem.title)}</span>
+                            <div style="display:flex; align-items:center; gap:15px;">
+                                <button class="delete-note-btn" onclick="destroyNote(${index}); event.stopPropagation();" title="Remove Outline">Delete</button>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                        </summary>
+                        <div class="card-content">
+                            <p class="subject-intro">Logged on: ${noteItem.timestamp}</p>
+                            <div class="lecture-topic">
+                                <h5 style="text-transform:none;">Personal Study Record Summary</h5>
+                                <p style="color: rgba(255,255,255,0.85); font-size:14px; line-height:1.6; white-space: pre-wrap;">${escapeHTML(noteItem.body)}</p>
+                            </div>
+                        </div>
+                    </details>
+                `;
+                dynamicCardsContainer.innerHTML += cardMarkup;
+            });
+        }
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
+
+        function destroyNote(targetIdx) {
+            if(confirm("Are you sure you want to delete this study note?")) {
+                collectionOfNotes.splice(targetIdx, 1);
+                localStorage.setItem('nursing_dashboard_custom_notes', JSON.stringify(collectionOfNotes));
+                renderStudentNotes();
+                executeGlobalDashboardSearch();
+            }
+        }
+
+        // Toggle Modal Displays
+        openModalFab.addEventListener('click', () => {
+            noteModal.classList.remove('hidden');
+            noteTitleInput.focus();
+        });
+
+        function clearAndCloseModal() {
+            noteModal.classList.add('hidden');
+            noteTitleInput.value = '';
+            noteBodyInput.value = '';
+        }
+
+        closeModalBtn.addEventListener('click', clearAndCloseModal);
+        cancelModalBtn.addEventListener('click', clearAndCloseModal);
+
+        saveNoteBtn.addEventListener('click', () => {
+            const titleValue = noteTitleInput.value.trim();
+            const bodyValue = noteBodyInput.value.trim();
+
+            if (!titleValue || !bodyValue) {
+                alert("Please write a label title and note contents before adding.");
+                return;
+            }
+
+            const formatOptions = { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+            const timestampString = new Date().toLocaleDateString('en-US', formatOptions);
+
+            const newNotePayload = {
+                title: titleValue,
+                body: bodyValue,
+                timestamp: timestampString
+            };
+
+            collectionOfNotes.push(newNotePayload);
+            localStorage.setItem('nursing_dashboard_custom_notes', JSON.stringify(collectionOfNotes));
+            
+            renderStudentNotes();
+            clearAndCloseModal();
+            
+            const othersBtn = document.getElementById('btn-others');
+            if(othersBtn) {
+                showView('notes');
+                othersBtn.click();
+            }
+        });
+
+        // SMART SEARCH ENGINE
+        function executeGlobalDashboardSearch() {
+            const query = searchInput.value.trim().toLowerCase();
+            showView('notes');
+
+            if (query === "") {
+                searchEmptyFallback.classList.add('hidden');
+                document.querySelectorAll('.note-card').forEach(card => {
+                    card.classList.remove('hidden');
+                    card.removeAttribute('open');
+                });
+                switchYear('year1');
+                return;
+            }
+
+            let primaryMatchingBlockId = null;
+            let totalMatchesFound = 0;
+            const blocks = ['year1', 'year2', 'year3', 'year4', 'others'];
+            
+            blocks.forEach(blockId => {
+                const parentBlock = document.getElementById(`${blockId}-content`);
+                if (!parentBlock) return;
+
+                const cardsInBlock = parentBlock.querySelectorAll('.note-card');
+
+                cardsInBlock.forEach(card => {
+                    const textSource = card.innerText.toLowerCase();
+                    if (textSource.includes(query)) {
+                        card.classList.remove('hidden');
+                        card.setAttribute('open', 'true');
+                        totalMatchesFound++;
+                        if (!primaryMatchingBlockId) {
+                            primaryMatchingBlockId = blockId;
+                        }
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+
+            if (totalMatchesFound > 0) {
+                searchEmptyFallback.classList.add('hidden');
+                switchYear(primaryMatchingBlockId);
+            } else {
+                document.querySelectorAll('.year-content-block').forEach(b => b.classList.add('hidden'));
+                searchEmptyFallback.classList.remove('hidden');
+            }
+        }
+
+        searchBtn.addEventListener('click', executeGlobalDashboardSearch);
+        searchInput.addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') {
+                executeGlobalDashboardSearch();
+            }
+        });
+
+        searchInput.addEventListener('input', () => {
+            if (searchInput.value.trim() === "") {
+                executeGlobalDashboardSearch();
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', renderStudentNotes);
+        
+        homeLink.addEventListener('click', (e) => { e.preventDefault(); showView('home'); });
+        notesLink.addEventListener('click', (e) => { e.preventDefault(); showView('notes'); });
+        aboutLink.addEventListener('click', (e) => { e.preventDefault(); showView('about'); });
+    </script>
+</body>
+</html>
